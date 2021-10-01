@@ -6,8 +6,18 @@ const tbody = document.getElementById('body-table');
 const message = document.getElementById('message');
 
 enterButton.addEventListener('click', (event) => {
-  //Implementar lógica del button submit
-  alert('Implementar lógica del button submit');
+  async function paint(data) {
+    tbody.innerHTML = "";
+    for(let i = 0; i < data.length; i++) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+      <td>${data[i][0]}</td>
+      <td>${data[i][1].first_name}</td>
+      <td>${data[i][1].first_name}</td>
+      `;
+      tbody.appendChild();
+    }
+  }
   getresults(123);
   event.preventDefault();
 });
